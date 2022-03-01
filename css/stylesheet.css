@@ -1,0 +1,323 @@
+html, body {
+  background-color: #025373;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+}
+/*/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////NAVIGATION///////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////*/
+nav {
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  display: inline;
+}
+
+ul li a {
+  color: #F0F0F2;
+  display: inline-block;
+  font-family: 'Palanquin', sans-serif;
+  padding: 2rem;
+  padding-bottom: 0.5rem;
+  transition: opacity .25s ease-in-out .0s;
+}
+
+.nav li:first-child {
+  float: left;
+}
+
+.nav li:last-child a {
+  float: right;
+  font-weight: bolder;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.nav li:last-child a:hover {
+  opacity: 0.5;
+}
+
+.nav {
+  z-index: 99999;
+}
+
+#logo {
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: 'Libre Baskerville', serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+/*/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////TEXT/////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////*/
+h2 {
+  color: #b898bb;
+  font-family: 'Palanquin', sans-serif;
+  font-size: 1em;
+}
+
+a.begin {
+  background-color: #025373;
+  border-radius: 50vw;
+  color: #FFFFFF;
+  display: inline-block;
+  font-family: 'Palanquin', sans-serif;
+  font-size: 3vw;
+  font-weight: 900;
+  letter-spacing: 0.7em;
+  margin: 1em;
+  padding: 1em 3em;
+  border: 0.1em solid #FFFFFF;
+  text-transform: uppercase;
+  transition: all 0.15s;
+}
+
+a.begin:hover {
+  border-color: #DDDDDD;
+  color: #b898bb;
+  letter-spacing: 0.9em;
+}
+
+i:hover{
+  opacity: 0.7;
+  transition: opacity .25s ease-in-out .0s;
+}
+
+.fas {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 2em;
+  width: 100vw;
+  text-align: center;
+}
+
+#h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 17vw;
+  font-family: 'Libre Baskerville', serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#logo {
+  font-weight: bold;
+  font-size: 2em;
+  font-family: 'Libre Baskerville', serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.button {
+  background-color: transparent;
+  border-radius: 50vw;
+  color: #FFFFFF;
+  display: inline-block;
+  font-family: 'Palanquin', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.7em;
+  margin: 1em;
+  padding: 1em 3em;
+  border: 0.1em solid #FFFFFF;
+  text-transform: uppercase;
+  max-width: 210px;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: #DDDDDD;
+  color: #b898bb;
+  letter-spacing: 0.9em;
+}
+
+p {
+  color: #F0F0F2;
+  line-height: 1.6;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////PLACEMENT////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////*/
+header {
+  background-color: #025373;;
+  box-shadow: 5px 10px 18px #025373;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  z-index: 1000;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 0px;
+  justify-items: center;
+  position: absolute;
+  top: 28vh;
+  width: 100vw;
+}
+
+.begin {
+  grid-column: 2;
+  grid-row: 3;
+  text-decoration: none;
+}
+
+.page {
+  height: 100vh;
+
+}
+
+#h1 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.containerAbout {
+  display: grid;
+  grid-template-rows: 1fr;
+  padding: 2rem;
+  padding-top: 10rem;
+  width: 90vw;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////IMG////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////*/
+#main {
+  background-image: url(../images/Untitled-11_01_02.png);
+  animation-name: fade;
+  animation-duration: 4s;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center 25vh;
+  background-size: 110vw;
+}
+#cornflower {
+  height: 10vh;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+}
+/*/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////SIZES////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+#main {
+  background-size: 90vw;
+}
+#h1 {
+  font-size: 15vw;
+}
+#logo {
+  font-size: 1.7em;
+}
+h2 {
+  font-size: 2em;
+  margin:0;
+  width: max-content;
+}
+a.begin {
+    font-size: 2vw;
+}
+.containerAbout {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  padding-top: 10rem;
+  width: 50vw;
+  height: auto;
+  margin: 0 auto;
+  grid-column-gap: 10vw;
+}
+
+#as {
+  grid-column: 1;
+}
+#htr {
+  grid-column: 2;
+  grid-row: 1;
+}
+.fas {
+    font-size: 3em;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 1080px) {
+  #main {
+    background-size: 80vw;
+    background-position: center 20vh;
+  }
+  #h1 {
+    font-size: 10vw;
+  }
+  #logo {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 2.6em;
+    margin:0;
+  }
+  a.begin {
+      font-size: 1vw;
+  }
+  .fas {
+      font-size: 4em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1500px) {
+  .containerAbout {
+    padding-top: 15rem;
+  }
+  #main {
+    background-size: 60vw;
+    background-position: center 17vh;
+  }
+  #h1 {
+    font-size: 7vw;
+  }
+  .nav li:last-child a {
+    font-size: 1.2em;
+  }
+  #logo {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 3em;
+    margin:0;
+  }
+  a.begin {
+    margin: 3em;
+      font-size: 0.7vw;
+  }
+  .fas {
+      font-size: 5em;
+  }
+}
